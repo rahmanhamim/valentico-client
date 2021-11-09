@@ -1,0 +1,40 @@
+.banner-left {
+ background: url("../../../images/banner.jpg");
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ min-height: 700px;
+}
+.banner-title {
+ font-size: 2.5rem;
+}
+.banner-subtitle {
+ color: #ab8e66;
+ font-size: 1.2rem;
+ font-weight: 600;
+}
+.btn-regular {
+ border: none;
+ outline: none;
+ background: #ab8e66;
+ font-weight: 500;
+ padding: 0.2em 1em;
+ color: white;
+ transition: all 400ms;
+}
+.btn-regular:hover {
+ background-color: black;
+}
+.banner-right-top {
+ background: url("../../../images/banner-right-1.jpg");
+ background-position: center;
+ background-size: cover;
+ min-height: 330px;
+}
+.banner-right-bottom {
+ background: url("../../../images/banner-right-2.jpg");
+ background-position: center;
+ background-size: cover;
+ min-height: 330px;
+ margin-top: 40px !important;
+}

@@ -1,0 +1,26 @@
+.navbar-container {
+ background-color: #f3f3f3;
+}
+.logo-span {
+ color: #ab8e66;
+}
+.nav-link-main {
+ text-decoration: none;
+ color: black;
+ margin: 0 0.5em;
+ padding: 0.1em 0.5em;
+ border-right: 2px solid #ab8e66;
+ font-weight: 600;
+ font-size: 1.1rem;
+ transition: all 300ms;
+}
+.nav-link-main:hover {
+ color: #ab8e66;
+ border-right: 2px solid #f3f3f3;
+ border-bottom: 1px solid #ab8e66;
+}
+.login-icon {
+ margin: 0.5em 0.5em;
+ font-size: 1.5rem;
+ color: #ab8e66;
+}
