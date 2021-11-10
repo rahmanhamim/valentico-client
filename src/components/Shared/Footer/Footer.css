@@ -1,0 +1,22 @@
+.footer-section {
+ margin-top: 10rem;
+ background-color: #f3f3f3;
+}
+.footer-input {
+ padding: 1em 4em;
+ border-radius: 50px;
+ border: 1px solid #ab8e66;
+ outline: none;
+ text-align: center;
+}
+.footer-btn {
+ padding: 1em 4em;
+ border-radius: 50px;
+ background-color: #ab8e66;
+ color: white;
+ border: none;
+ transition: all 400ms;
+}
+.footer-btn:hover {
+ background-color: black;
+}

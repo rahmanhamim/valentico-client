@@ -1,0 +1,18 @@
+.login-form-container {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin-top: 6rem;
+}
+.login-form input {
+ display: block;
+ padding: 0.5em 1em;
+ margin-bottom: 1rem;
+ min-width: 20rem;
+ border: 1px solid #ab8e66;
+ outline: 1px solid #fff;
+}
+.login-form input:focus {
+ border: 1px solid #ab8e66;
+ outline: 1px solid #ab8e66;
+}

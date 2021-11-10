@@ -3,8 +3,11 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import logo from "../../../images/logo.png";
 import "./Navigation.css";
 import { Link } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
 
 const Navigation = () => {
+ const { user, logOut } = useAuth();
+
  return (
   <Navbar className="navbar-container" expand="lg">
    <Container>
@@ -20,14 +23,22 @@ const Navigation = () => {
       <Link to="/" className="nav-link-main d-inline-block">
        Home
       </Link>
-      <Link to="/products" className="nav-link-main">
+      <Link to="/allproducts" className="nav-link-main">
        Explore
       </Link>
      </Nav>
 
-     <Link to="/">
-      <i className="far fa-user login-icon"></i>
-     </Link>
+     {user?.email ? (
+      <Link to="/">
+       <button className="btn-regular px-2" onClick={logOut}>
+        Logout <i className="fas fa-sign-out-alt"></i>
+       </button>
+      </Link>
+     ) : (
+      <Link to="/login">
+       <i className="far fa-user login-icon"></i>
+      </Link>
+     )}
     </Navbar.Collapse>
    </Container>
   </Navbar>

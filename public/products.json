@@ -1,6 +1,6 @@
 [
  {
-  "name": "ARMAF CLUB DE NUIT INTENSE MEN",
+  "name": "CLUB DE NUIT INTENSE MEN",
   "brand": "ARMAF CLUB",
   "img": "https://i.ibb.co/6RDmZ1d/cdnim.png",
   "rating": 5,
@@ -31,14 +31,7 @@
   "price": 3000,
   "description": "Rumz Al Rasasi 9325 Pour Lui by Rasasi is a Chypre Fruity fragrance for men. Rumz Al Rasasi 9325 Pour Lui was launched in 2013. Top notes are Pineapple, Lime, Lemon, Bergamot, Black Pepper, Plum and Pear; middle notes are Jasmine, Freesia and Lily-of-the-Valley; base notes are Ambergris, Cedar, Leather, White Musk, Oakmoss and Patchouli."
  },
- {
-  "name": "BURBERRY FOR MEN EDT",
-  "brand": "BURBERRY",
-  "img": "https://i.ibb.co/1dshGgn/burberry.png",
-  "rating": 5,
-  "price": 3000,
-  "description": "Burberry for Men EDT by Burberry, Launched by the design house of Burberry's in 1997, Burberry is classified as a sharp, spicy, lavender, amber fragrance. This masculine scent possesses a blend of mint, lavender, sandalwood, cedar, and rich amber. It is recommended for casual wear."
- },
+
  {
   "name": "RASASI TASMEEM",
   "brand": "RASASI",
@@ -46,5 +39,45 @@
   "rating": 5,
   "price": 2000,
   "description": "Tasmeem Men by Rasasi is a Amber Spicy fragrance for men. Top notes are Cumin, Cardamom and Artemisia; middle notes are Rose and Orris Root; base notes are Vanilla, Tonka Bean, Sandalwood, Amber, Musk and Patchouli."
+ },
+ {
+  "name": "RASASI DAAREJ",
+  "brand": "RASASI",
+  "img": "https://i.ibb.co/WpKtRNJ/daarej.jpg",
+  "rating": 5,
+  "price": 2500,
+  "description": "Daarej pour Femme by Rasasi is a Floral Fruity Gourmand fragrance for women. Top notes are Peach, Orange, Bergamot and Green Notes; middle notes are Heliotrope, Orchid, Tuberose, Lily-of-the-Valley and Jasmine; base notes are Caramel, Vetiver, Musk, Sandalwood, Amber and Patchouli."
+ },
+ {
+  "name": "JACQUES BOGART POUR HOMME",
+  "brand": "JACQUES BOGART",
+  "img": "https://i.ibb.co/5jHysGV/jacques-bogart.png",
+  "rating": 5,
+  "price": 2500,
+  "description": "Bogart Pour Homme by Jacques Bogart is a fragrance for men. Bogart Pour Homme was launched in 2004. Bogart Pour Homme was created by Maurice Roucel and Norbert Bijaoui. Top notes are Lavender and Bergamot; middle notes are Orange Blossom, Rose and Lily-of-the-Valley; base notes are Tonka Bean, Patchouli, Cedar, Oakmoss and Musk."
+ },
+ {
+  "name": "AZZARO CHROME",
+  "brand": "AZZARO",
+  "img": "https://i.ibb.co/B653J51/azzaro-chrome.png",
+  "rating": 5,
+  "price": 4000,
+  "description": "Chrome by Azzaro is a Citrus Aromatic fragrance for men. Chrome was launched in 1996. The nose behind this fragrance is Gerard Haury. Top notes are Lemon, Rosemary, Bergamot, Neroli and Pineapple; middle notes are Jasmine, Cyclamen, Oakmoss and Coriander; base notes are Musk, Cedar, Oakmoss, Sandalwood, Cardamom, Tonka Bean and Brazilian Rosewood."
+ },
+ {
+  "name": "VERSACE EROS",
+  "brand": "VERSACE",
+  "img": "https://i.ibb.co/23VHNc6/varsace.png",
+  "rating": 5,
+  "price": 2500,
+  "description": "Eros by Versace is a Aromatic Fougere fragrance for men. Eros was launched in 2012. The nose behind this fragrance is Aurelien Guichard. Top notes are Mint, Green Apple and Lemon; middle notes are Tonka Bean, Ambroxan and Geranium; base notes are Madagascar Vanilla, Virginian Cedar, Atlas Cedar, Vetiver and Oakmoss."
+ },
+ {
+  "name": "BURBERRY FOR MEN EDT",
+  "brand": "BURBERRY",
+  "img": "https://i.ibb.co/1dshGgn/burberry.png",
+  "rating": 5,
+  "price": 3000,
+  "description": "Burberry for Men EDT by Burberry, Launched by the design house of Burberry's in 1997, Burberry is classified as a sharp, spicy, lavender, amber fragrance. This masculine scent possesses a blend of mint, lavender, sandalwood, cedar, and rich amber. It is recommended for casual wear."
  }
 ]

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Card, Col, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import Product from "../Product/Product";
 import "./Products.css";
 
@@ -12,7 +12,7 @@ const Products = () => {
  }, []);
 
  return (
-  <section className="my-5 container-fluid">
+  <section style={{ marginTop: "6rem" }} className="mb-5 container-fluid">
    <h2 className="section-title">DEALS FOR YOU</h2>
    <Row className="my-5 d-flex justify-content-center">
     <Col sm={12} md={3}>

@@ -1,0 +1,8 @@
+.featured-section {
+ background: linear-gradient(#e0dddd5e, #a5a2a221),
+  url("../../../images/bottom-banner-home.jpg");
+ min-height: 300px;
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center;
+}
