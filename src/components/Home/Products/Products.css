@@ -1,0 +1,32 @@
+.section-title {
+ text-align: center;
+ position: relative;
+}
+.section-title:after {
+ content: "";
+ background: #ab8e66;
+ position: absolute;
+ bottom: -8px;
+ left: 50%;
+ transform: translateX(-50%);
+ height: 3px;
+ width: 8%;
+ min-width: 70px;
+ margin: auto;
+}
+.products-side-img-women {
+ background: url("../.././../images/womens-side.jpg");
+ min-height: 300px;
+ height: 100%;
+ background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
+}
+.products-side-img-men {
+ background: url("../.././../images/mens-side.jpg");
+ min-height: 300px;
+ height: 100%;
+ background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
+}
