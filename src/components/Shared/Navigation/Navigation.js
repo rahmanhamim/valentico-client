@@ -27,13 +27,17 @@ const Navigation = () => {
        Explore
       </Link>
      </Nav>
-
      {user?.email ? (
-      <Link to="/">
-       <button className="btn-regular px-2" onClick={logOut}>
-        Logout <i className="fas fa-sign-out-alt"></i>
-       </button>
-      </Link>
+      <>
+       <span className="me-2">
+        <strong>{user.displayName}</strong>
+       </span>
+       <Link to="/">
+        <button className="btn-regular px-2" onClick={logOut}>
+         Logout <i className="fas fa-sign-out-alt"></i>
+        </button>
+       </Link>
+      </>
      ) : (
       <Link to="/login">
        <i className="far fa-user login-icon"></i>

@@ -3,16 +3,18 @@ import "./Login.css";
 import { useForm } from "react-hook-form";
 import Footer from "../../Shared/Footer/Footer";
 import Navigation from "../../Shared/Navigation/Navigation";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useHistory } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 import { Alert, Spinner } from "react-bootstrap";
 
 const Login = () => {
  const { user, loginUser, isLoading, authError } = useAuth();
+ const location = useLocation();
+ const history = useHistory();
 
  const { register, handleSubmit, reset } = useForm();
  const onSubmit = (data) => {
-  loginUser(data.email, data.password);
+  loginUser(data.email, data.password, location, history);
   reset();
  };
 
@@ -25,7 +27,7 @@ const Login = () => {
      {!isLoading && (
       <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
        <input
-        {...register("email", { required: true, maxLength: 20 })}
+        {...register("email", { required: true })}
         placeholder="Your Email"
        />
        <input

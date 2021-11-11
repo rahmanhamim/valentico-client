@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./Product.css";
 
 const Product = ({ product }) => {
@@ -11,7 +12,9 @@ const Product = ({ product }) => {
      <Card.Title className="text-center">{product.name}</Card.Title>
      <Card.Text className="text-center">
       <strong style={{ color: "#FE7250" }}>৳{product.price}</strong>
-      <button className="btn-regular ms-3 card-btn">Buy Now</button>
+      <Link to={`product/${product._id}`}>
+       <button className="btn-regular ms-3 card-btn">Buy Now</button>
+      </Link>
      </Card.Text>
     </Card.Body>
    </Card>

@@ -5,6 +5,8 @@ import Explore from "./components/Explore/Explore/Explore";
 import Login from "./components/Login/Login/Login";
 import Register from "./components/Login/Register/Register";
 import AuthProvider from "./contexts/AuthProvider/AuthProvider";
+import PrivateRoute from "./components/Login/PrivateRoute/PrivateRoute";
+import ProductDetails from "./components/ProductDetails/ProductDetails";
 
 function App() {
  return (
@@ -14,9 +16,12 @@ function App() {
      <Route exact path="/">
       <Home></Home>
      </Route>
-     <Route path="/allproducts">
+     <PrivateRoute path="/allproducts">
       <Explore></Explore>
-     </Route>
+     </PrivateRoute>
+     <PrivateRoute path="/product/:id">
+      <ProductDetails></ProductDetails>
+     </PrivateRoute>
      <Route path="/login">
       <Login></Login>
      </Route>

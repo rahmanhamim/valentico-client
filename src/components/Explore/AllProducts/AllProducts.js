@@ -5,7 +5,7 @@ import Product from "../../Home/Product/Product";
 const AllProducts = () => {
  const [products, setProducts] = useState([]);
  useEffect(() => {
-  fetch("./products.json")
+  fetch("http://localhost:5000/products")
    .then((res) => res.json())
    .then((data) => setProducts(data));
  }, []);
@@ -17,7 +17,7 @@ const AllProducts = () => {
    </div>
    <Row>
     {products.map((product) => (
-     <Product product={product}></Product>
+     <Product key={product.name} product={product}></Product>
     ))}
    </Row>
   </section>

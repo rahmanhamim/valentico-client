@@ -10,7 +10,7 @@ const Register = () => {
  const { user, registerUser, isLoading, authError } = useAuth();
 
  const { register, handleSubmit } = useForm();
- const onSubmit = (data) => registerUser(data.email, data.password);
+ const onSubmit = (data) => registerUser(data.email, data.password, data.name);
 
  return (
   <>
@@ -20,12 +20,12 @@ const Register = () => {
     <div className="login-form-container">
      {!isLoading && (
       <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
-       {/* <input
-       {...register("name", { required: true, maxLength: 20 })}
-       placeholder="Your Name"
-      /> */}
        <input
-        {...register("email", { required: true, maxLength: 20 })}
+        {...register("name", { required: true })}
+        placeholder="Your Name"
+       />
+       <input
+        {...register("email", { required: true })}
         placeholder="Your Email"
        />
        <input
