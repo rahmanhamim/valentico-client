@@ -32,6 +32,9 @@ const Navigation = () => {
        <span className="me-2">
         <strong>{user.displayName}</strong>
        </span>
+       <Link to="/dashboard">
+        <button className="btn-regular px-2 me-2">Dashboard</button>
+       </Link>
        <Link to="/">
         <button className="btn-regular px-2" onClick={logOut}>
          Logout <i className="fas fa-sign-out-alt"></i>
