@@ -4,12 +4,50 @@ import "./ManageAllOrders.css";
 
 const ManageAllOrders = () => {
  const [orders, setOrders] = useState([]);
+ const [updateStatus, setUpdateStatus] = useState(false);
 
  useEffect(() => {
   fetch("http://localhost:5000/orders")
    .then((res) => res.json())
    .then((data) => setOrders(data));
- }, []);
+ }, [updateStatus]);
+
+ //  Handle cancel order
+ const handleDelete = (id) => {
+  const query = window.confirm("are you sure?");
+  if (!query) {
+   return;
+  } else {
+   const url = `http://localhost:5000/orders/${id}`;
+   fetch(url, {
+    method: "DELETE",
+   })
+    .then((res) => res.json())
+    .then((data) => {
+     if (data.deletedCount) {
+      alert("deleted");
+     }
+     const remaining = orders.filter((items) => items._id !== id);
+     setOrders(remaining);
+    });
+  }
+ };
+
+ //  Handle Product Status
+ const handleStatus = (id) => {
+  const status = { status: "Shipped" };
+  fetch(`http://localhost:5000/orders/${id}`, {
+   method: "PUT",
+   headers: { "content-type": "application/json" },
+   body: JSON.stringify(status),
+  })
+   .then((res) => res.json())
+   .then((result) => {
+    console.log(result);
+    setUpdateStatus(!updateStatus);
+    alert("Product Shipped");
+   });
+ };
 
  return (
   <div className="my-4">
@@ -20,7 +58,7 @@ const ManageAllOrders = () => {
       <Card className="h-100 p-2">
        <div className="px-3">
         <p className="my-0">
-         <strong>Name:</strong> {order.name}{" "}
+         <strong>Name:</strong> {order.name}
         </p>
         <p className="my-0">
          <strong>Email:</strong> {order.email}
@@ -43,8 +81,18 @@ const ManageAllOrders = () => {
        <Card.Body>
         <Card.Text>
          <small className="d-block fs-5">Status: {order?.status}</small>
-         <button className="btn-confirm-order">Confirm Order</button>
-         <button className="btn-manage-order">Cancel Order</button>
+         <button
+          onClick={() => handleStatus(order._id)}
+          className="btn-confirm-order"
+         >
+          Confirm Order
+         </button>
+         <button
+          onClick={() => handleDelete(order._id)}
+          className="btn-delete-order"
+         >
+          Cancel Order
+         </button>
         </Card.Text>
        </Card.Body>
       </Card>

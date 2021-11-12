@@ -7,6 +7,8 @@ import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
 import MakeAdmin from "../MakeAdmin/MakeAdmin";
 import AdminRoute from "../../Login/AdminRoute/AdminRoute";
 import ManageAllOrders from "../ManageAllOrders/ManageAllOrders";
+import Review from "../Review/Review";
+import ManageProduct from "../ManageProduct/ManageProduct";
 
 const Dashboard = () => {
  const [show, setShow] = useState(false);
@@ -81,13 +83,13 @@ const Dashboard = () => {
        <MyOrders></MyOrders>
       </Route>
       <Route path={`${path}/review`}>
-       <h1>Review</h1>
+       <Review></Review>
       </Route>
       <AdminRoute path={`${path}/manageallorders`}>
        <ManageAllOrders></ManageAllOrders>
       </AdminRoute>
       <AdminRoute path={`${path}/manageproducts`}>
-       <h1>Manage Products</h1>
+       <ManageProduct></ManageProduct>
       </AdminRoute>
       <AdminRoute path={`${path}/makeadmin`}>
        <MakeAdmin></MakeAdmin>

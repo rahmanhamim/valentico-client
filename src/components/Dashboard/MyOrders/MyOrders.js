@@ -13,6 +13,27 @@ const MyOrders = () => {
    .then((data) => setMyOrders(data));
  }, [user.email]);
 
+ //  Handle cancel order
+ const handleDelete = (id) => {
+  const query = window.confirm("are you sure?");
+  if (!query) {
+   return;
+  } else {
+   const url = `http://localhost:5000/orders/${id}`;
+   fetch(url, {
+    method: "DELETE",
+   })
+    .then((res) => res.json())
+    .then((data) => {
+     if (data.deletedCount) {
+      alert("deleted");
+     }
+     const remaining = myOrders.filter((items) => items._id !== id);
+     setMyOrders(remaining);
+    });
+  }
+ };
+
  return (
   <div className="my-5">
    <h3> My Orders: </h3>
@@ -37,7 +58,8 @@ const MyOrders = () => {
          <small className="d-block fs-5">Status: {order?.status}</small>
          <button
           style={{ backgroundColor: "#FE7250", color: "white" }}
-          className="btn"
+          className="btn-delete-order"
+          onClick={() => handleDelete(order._id)}
          >
           Cancel Order
          </button>
