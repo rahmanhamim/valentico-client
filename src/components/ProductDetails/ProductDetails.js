@@ -17,6 +17,7 @@ const ProductDetails = () => {
   data.email = user.email;
   data.name = user.displayName;
   data.status = "Pending";
+  data.product = product;
   console.log(data);
 
   fetch("http://localhost:5000/orders", {

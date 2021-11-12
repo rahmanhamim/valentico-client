@@ -7,7 +7,7 @@ import Register from "./components/Login/Register/Register";
 import AuthProvider from "./contexts/AuthProvider/AuthProvider";
 import PrivateRoute from "./components/Login/PrivateRoute/PrivateRoute";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
-import Dashboard from "./components/Dashboard/Dashboard";
+import Dashboard from "./components/Dashboard/Dashboard/Dashboard";
 
 function App() {
  return (
