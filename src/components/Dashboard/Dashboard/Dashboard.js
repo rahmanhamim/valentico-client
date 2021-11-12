@@ -3,21 +3,17 @@ import React, { useState } from "react";
 import { Offcanvas } from "react-bootstrap";
 import useAuth from "../../../hooks/useAuth";
 import MyOrders from "../MyOrders/MyOrders";
-import {
- BrowserRouter as Router,
- Switch,
- Route,
- Link,
- useParams,
- useRouteMatch,
-} from "react-router-dom";
+import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
+import MakeAdmin from "../MakeAdmin/MakeAdmin";
+import AdminRoute from "../../Login/AdminRoute/AdminRoute";
+import ManageAllOrders from "../ManageAllOrders/ManageAllOrders";
 
 const Dashboard = () => {
  const [show, setShow] = useState(false);
  const handleClose = () => setShow(false);
  const toggleShow = () => setShow((s) => !s);
 
- const { logOut } = useAuth();
+ const { logOut, admin } = useAuth();
 
  let { path, url } = useRouteMatch();
 
@@ -46,15 +42,19 @@ const Dashboard = () => {
      <Link to={`${url}/review`} className="text-decoration-none">
       <button className="btn-regular d-block my-2">Review</button>
      </Link>
-     <Link to={`${url}/manageallorders`} className="text-decoration-none">
-      <button className="btn-regular d-block my-2">Manage All Orders</button>
-     </Link>
-     <Link to={`${url}/manageproducts`} className="text-decoration-none">
-      <button className="btn-regular d-block my-2">Manage Product</button>
-     </Link>
-     <Link to={`${url}/makeadmin`} className="text-decoration-none">
-      <button className="btn-regular d-block my-2">Make An Admin</button>
-     </Link>
+     {admin && (
+      <div>
+       <Link to={`${url}/manageallorders`} className="text-decoration-none">
+        <button className="btn-regular d-block my-2">Manage All Orders</button>
+       </Link>
+       <Link to={`${url}/manageproducts`} className="text-decoration-none">
+        <button className="btn-regular d-block my-2">Manage Product</button>
+       </Link>
+       <Link to={`${url}/makeadmin`} className="text-decoration-none">
+        <button className="btn-regular d-block my-2">Make An Admin</button>
+       </Link>
+      </div>
+     )}
      <Link to="/" className="text-decoration-none">
       <button className="btn-regular bg-success d-block my-2">
        Go back home
@@ -83,15 +83,15 @@ const Dashboard = () => {
       <Route path={`${path}/review`}>
        <h1>Review</h1>
       </Route>
-      <Route path={`${path}/manageallorders`}>
-       <h1>Manage All Orders</h1>
-      </Route>
-      <Route path={`${path}/manageproducts`}>
+      <AdminRoute path={`${path}/manageallorders`}>
+       <ManageAllOrders></ManageAllOrders>
+      </AdminRoute>
+      <AdminRoute path={`${path}/manageproducts`}>
        <h1>Manage Products</h1>
-      </Route>
-      <Route path={`${path}/Make An Admin`}>
-       <h1>Make An Admin</h1>
-      </Route>
+      </AdminRoute>
+      <AdminRoute path={`${path}/makeadmin`}>
+       <MakeAdmin></MakeAdmin>
+      </AdminRoute>
      </Switch>
     </div>
    </div>

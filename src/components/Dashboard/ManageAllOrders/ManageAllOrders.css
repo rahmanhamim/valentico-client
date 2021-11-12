@@ -1,0 +1,14 @@
+.btn-manage-order {
+ background: linear-gradient(to right, #e74c3d, #c44034);
+ border: none;
+ color: white;
+ border-radius: 10px;
+}
+.btn-confirm-order {
+ display: block;
+ margin: 0.5em 0;
+ background: linear-gradient(to right, #15a085, #15a085);
+ border: none;
+ color: white;
+ border-radius: 10px;
+}
