@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import Product from "../Product/Product";
 import "./Products.css";
 
@@ -21,7 +22,9 @@ const Products = () => {
        <h2 className="text-light">
         FLOWERS FROM <br /> NATURE
        </h2>
-       <button className="btn-regular">Shop Now</button>
+       <Link to="/allproducts">
+        <button className="btn-regular">Shop Now</button>
+       </Link>
       </div>
      </div>
     </Col>
@@ -47,7 +50,9 @@ const Products = () => {
        <h2 className="text-light">
         We Bring You <br /> The Best
        </h2>
-       <button className="btn-regular">Shop Now</button>
+       <Link to="/allproducts">
+        <button className="btn-regular">Shop Now</button>
+       </Link>
       </div>
      </div>
     </Col>

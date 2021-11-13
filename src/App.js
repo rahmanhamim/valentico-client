@@ -8,6 +8,7 @@ import AuthProvider from "./contexts/AuthProvider/AuthProvider";
 import PrivateRoute from "./components/Login/PrivateRoute/PrivateRoute";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
 import Dashboard from "./components/Dashboard/Dashboard/Dashboard";
+import PageNotFound from "./components/PageNotFound/PageNotFound";
 
 function App() {
  return (
@@ -17,9 +18,9 @@ function App() {
      <Route exact path="/">
       <Home></Home>
      </Route>
-     <PrivateRoute path="/allproducts">
+     <Route path="/allproducts">
       <Explore></Explore>
-     </PrivateRoute>
+     </Route>
      <PrivateRoute path="/product/:id">
       <ProductDetails></ProductDetails>
      </PrivateRoute>
@@ -31,6 +32,9 @@ function App() {
      </Route>
      <Route path="/register">
       <Register></Register>
+     </Route>
+     <Route path="*">
+      <PageNotFound></PageNotFound>
      </Route>
     </Switch>
    </Router>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./Banner.css";
 
 const Banner = () => {
@@ -17,9 +18,11 @@ const Banner = () => {
        A Range Of <br /> Perfume
       </h2>
       <p>
-       New Price: <span className="banner-subtitle"> $250.00</span>
+       Starts Price: <span className="banner-subtitle"> ৳550.00</span>
       </p>
-      <button className="btn-regular">Shop Now</button>
+      <Link to="/allproducts">
+       <button className="btn-regular">Shop Now</button>
+      </Link>
      </div>
     </Col>
     <Col xs={12} md={4}>
@@ -30,9 +33,11 @@ const Banner = () => {
          Pick Your <br /> Items
         </h3>
         <p className="text-secondary">
-         Adipiscing elit <br /> curabitur senectus sem
+         Smell fresher, <br /> our perfumes are the answer.
         </p>
-        <button className="btn-regular">Shop Now</button>
+        <Link to="/allproducts">
+         <button className="btn-regular">Shop Now</button>
+        </Link>
        </div>
       </Col>
       <Col
@@ -44,10 +49,10 @@ const Banner = () => {
          Best Of <br /> Products
         </h3>
         <p className="text-secondary">
-         Cras pulvinar <br /> loresum dolor conse
+         fragrance <br /> thats you love
         </p>
         <p>
-         New Price: <span className="banner-subtitle"> $250.00</span>
+         New Price: <span className="banner-subtitle"> ৳850.00</span>
         </p>
        </div>
       </Col>

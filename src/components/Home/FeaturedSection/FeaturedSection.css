@@ -2,6 +2,28 @@
  background: linear-gradient(#e0dddd5e, #a5a2a221),
   url("../../../images/bottom-banner-home.jpg");
  min-height: 300px;
+ width: 100%;
+ padding: 3em 0;
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center;
+}
+.feature-left-1 {
+ background: linear-gradient(#e0dddd5e, #a5a2a221),
+  url("../../../images/feature-left-1.jpg");
+ min-height: 300px;
+ width: 49%;
+ padding: 3em 0;
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center;
+}
+.feature-right-2 {
+ background: linear-gradient(#e0dddd5e, #a5a2a221),
+  url("../../../images/feature-right-2.jpg");
+ min-height: 300px;
+ width: 49%;
+ padding: 3em 0;
  background-repeat: no-repeat;
  background-size: cover;
  background-position: center;
