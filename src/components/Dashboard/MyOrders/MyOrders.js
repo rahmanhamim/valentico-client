@@ -37,7 +37,11 @@ const MyOrders = () => {
  return (
   <div className="my-5">
    <h3> My Orders: </h3>
-   {myOrders.length === 0 && <p>You have no orders</p>}
+   {myOrders.length === 0 && (
+    <p>
+     You have no orders. <br /> click manage to mange your dashboard
+    </p>
+   )}
    <Row xs={1} md={4} className="g-4">
     {myOrders.map((order) => (
      <Col key={order._id}>

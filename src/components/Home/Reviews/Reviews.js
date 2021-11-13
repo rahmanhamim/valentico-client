@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Card, Col, Row } from "react-bootstrap";
-import reviewer from "../../../images/reviewer-1.png";
 
 const Reviews = () => {
  const [productReviews, setProductReviews] = useState([]);
+ console.log(productReviews);
 
  useEffect(() => {
   fetch("http://localhost:5000/reviews")
@@ -21,11 +21,42 @@ const Reviews = () => {
      <Col key={review._id}>
       <Card className="h-100 p-3">
        <div className="d-flex align-items-center">
-        <Card.Img style={{ width: "40px" }} variant="top" src={reviewer} />
-        <Card.Title className="ms-2">{review?.reviewer}</Card.Title>
+        <i className="fas fa-2x fa-user-circle text-muted"></i>
+        <Card.Title className="ms-2 my-0">{review?.reviewer}</Card.Title>
        </div>
        <Card.Body className="px-1">
         <Card.Text>{review?.reviewText}</Card.Text>
+        <p>
+         {review.rating === "5" ? (
+          <>
+           <i className="fas fa-star  text-warning"></i>
+           <i className="fas fa-star  text-warning"></i>
+           <i className="fas fa-star  text-warning"></i>
+           <i className="fas fa-star  text-warning"></i>
+           <i className="fas fa-star  text-warning"></i>
+          </>
+         ) : review.rating === "4" ? (
+          <>
+           <i className="fas fa-star text-warning"></i>
+           <i className="fas fa-star text-warning"></i>
+           <i className="fas fa-star text-warning"></i>
+           <i className="fas fa-star text-warning"></i>
+          </>
+         ) : review.rating === "3" ? (
+          <>
+           <i className="fas fa-star text-warning"></i>
+           <i className="fas fa-star text-warning"></i>
+           <i className="fas fa-star text-warning"></i>
+          </>
+         ) : review.rating === "2" ? (
+          <>
+           <i className="fas fa-star text-warning"></i>
+           <i className="fas fa-star text-warning"></i>
+          </>
+         ) : (
+          <i className="fas fa-star text-warning"></i>
+         )}
+        </p>
        </Card.Body>
       </Card>
      </Col>

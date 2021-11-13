@@ -15,7 +15,7 @@ const Dashboard = () => {
  const handleClose = () => setShow(false);
  const toggleShow = () => setShow((s) => !s);
 
- const { logOut, admin } = useAuth();
+ const { logOut, admin, user } = useAuth();
 
  let { path, url } = useRouteMatch();
 
@@ -29,7 +29,10 @@ const Dashboard = () => {
     backdrop={false}
    >
     <Offcanvas.Header closeButton>
-     <Offcanvas.Title>Dashboard</Offcanvas.Title>
+     <Offcanvas.Title>
+      <h2>Dashboard</h2>
+      <p>User: {user.displayName}</p>
+     </Offcanvas.Title>
     </Offcanvas.Header>
     <Offcanvas.Body>
      <button
