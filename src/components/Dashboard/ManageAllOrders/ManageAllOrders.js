@@ -18,7 +18,7 @@ const ManageAllOrders = () => {
   if (!query) {
    return;
   } else {
-   const url = `https://radiant-plains-03771.herokuapp.com/${id}`;
+   const url = `https://radiant-plains-03771.herokuapp.com/orders/${id}`;
    fetch(url, {
     method: "DELETE",
    })
