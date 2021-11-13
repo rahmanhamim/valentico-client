@@ -20,7 +20,7 @@ const ProductDetails = () => {
   data.product = product;
   console.log(data);
 
-  fetch("http://localhost:5000/orders", {
+  fetch("https://radiant-plains-03771.herokuapp.com/orders", {
    method: "POST",
    headers: {
     "content-type": "application/json",
@@ -37,7 +37,7 @@ const ProductDetails = () => {
  };
 
  useEffect(() => {
-  fetch(`http://localhost:5000/product/${id}`)
+  fetch(`https://radiant-plains-03771.herokuapp.com/product/${id}`)
    .then((res) => res.json())
    .then((data) => setProduct(data));
  }, [id]);

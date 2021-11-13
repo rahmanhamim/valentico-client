@@ -6,7 +6,7 @@ const ManageProduct = () => {
  const { register, handleSubmit, reset } = useForm();
  const onSubmit = (data) => {
   console.log(data);
-  fetch("http://localhost:5000/products", {
+  fetch("https://radiant-plains-03771.herokuapp.com/products", {
    method: "POST",
    headers: {
     "content-type": "application/json",
@@ -24,7 +24,7 @@ const ManageProduct = () => {
 
  const [products, setProducts] = useState([]);
  useEffect(() => {
-  fetch("http://localhost:5000/products")
+  fetch("https://radiant-plains-03771.herokuapp.com/products")
    .then((res) => res.json())
    .then((data) => setProducts(data));
  }, []);
@@ -35,7 +35,7 @@ const ManageProduct = () => {
   if (!query) {
    return;
   } else {
-   const url = `http://localhost:5000/products/${id}`;
+   const url = `https://radiant-plains-03771.herokuapp.com/${id}`;
    fetch(url, {
     method: "DELETE",
    })

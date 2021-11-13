@@ -7,7 +7,7 @@ const ManageAllOrders = () => {
  const [updateStatus, setUpdateStatus] = useState(false);
 
  useEffect(() => {
-  fetch("http://localhost:5000/orders")
+  fetch("https://radiant-plains-03771.herokuapp.com/orders")
    .then((res) => res.json())
    .then((data) => setOrders(data));
  }, [updateStatus]);
@@ -18,7 +18,7 @@ const ManageAllOrders = () => {
   if (!query) {
    return;
   } else {
-   const url = `http://localhost:5000/orders/${id}`;
+   const url = `https://radiant-plains-03771.herokuapp.com/${id}`;
    fetch(url, {
     method: "DELETE",
    })
@@ -36,7 +36,7 @@ const ManageAllOrders = () => {
  //  Handle Product Status
  const handleStatus = (id) => {
   const status = { status: "Shipped" };
-  fetch(`http://localhost:5000/orders/${id}`, {
+  fetch(`https://radiant-plains-03771.herokuapp.com/orders/${id}`, {
    method: "PUT",
    headers: { "content-type": "application/json" },
    body: JSON.stringify(status),

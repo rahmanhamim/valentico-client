@@ -5,7 +5,7 @@ import Product from "../../Home/Product/Product";
 const AllProducts = () => {
  const [products, setProducts] = useState([]);
  useEffect(() => {
-  fetch("http://localhost:5000/products")
+  fetch("https://radiant-plains-03771.herokuapp.com/products")
    .then((res) => res.json())
    .then((data) => setProducts(data));
  }, []);

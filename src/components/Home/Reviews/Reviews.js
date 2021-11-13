@@ -6,7 +6,7 @@ const Reviews = () => {
  console.log(productReviews);
 
  useEffect(() => {
-  fetch("http://localhost:5000/reviews")
+  fetch("https://radiant-plains-03771.herokuapp.com/reviews")
    .then((res) => res.json())
    .then((data) => setProductReviews(data));
  }, []);

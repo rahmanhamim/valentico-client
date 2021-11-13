@@ -7,7 +7,7 @@ const MyOrders = () => {
  const [myOrders, setMyOrders] = useState([]);
 
  useEffect(() => {
-  const url = `http://localhost:5000/myorders?email=${user.email}`;
+  const url = `https://radiant-plains-03771.herokuapp.com/myorders?email=${user.email}`;
   fetch(url)
    .then((res) => res.json())
    .then((data) => setMyOrders(data));
@@ -19,7 +19,7 @@ const MyOrders = () => {
   if (!query) {
    return;
   } else {
-   const url = `http://localhost:5000/orders/${id}`;
+   const url = `https://radiant-plains-03771.herokuapp.com/${id}`;
    fetch(url, {
     method: "DELETE",
    })

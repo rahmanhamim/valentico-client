@@ -10,7 +10,7 @@ const Review = () => {
  const onSubmit = (data) => {
   data.reviewer = user.displayName;
   console.log(data);
-  fetch("http://localhost:5000/reviews", {
+  fetch("https://radiant-plains-03771.herokuapp.com/reviews", {
    method: "POST",
    headers: {
     "content-type": "application/json",
